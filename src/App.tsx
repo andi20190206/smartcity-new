@@ -10,6 +10,13 @@ import WccLogin from '@mobile/wcc/WccLogin'
 import WccHome from '@mobile/wcc/WccHome'
 import WccPurchaseList from '@mobile/wcc/WccPurchaseList'
 import WccPurchaseDetail from '@mobile/wcc/WccPurchaseDetail'
+import SalesSelectVehicle from '@mobile/sales/SalesSelectVehicle'
+import SalesCreate from '@mobile/sales/SalesCreate'
+import SalesList from '@mobile/sales/SalesList'
+import SalesDetail from '@mobile/sales/SalesDetail'
+import SalesSuccess from '@mobile/sales/SalesSuccess'
+import SalesApprovalList from '@mobile/approval/SalesApprovalList'
+import SalesApprovalDetail from '@mobile/approval/SalesApprovalDetail'
 
 // 临时占位组件 — 等截图后替换为真实页面
 function Placeholder({ name }: { name: string }) {
@@ -41,9 +48,11 @@ export default function App() {
       <Route path="/purchase/batch-import" element={<Placeholder name="批量导入" />} />
 
       {/* 销售 */}
-      <Route path="/sales" element={<Placeholder name="销售列表" />} />
-      <Route path="/sales/create" element={<Placeholder name="发起销售" />} />
-      <Route path="/sales/detail/:id" element={<Placeholder name="销售详情" />} />
+      <Route path="/sales" element={<SalesList />} />
+      <Route path="/sales/select" element={<SalesSelectVehicle />} />
+      <Route path="/sales/create" element={<SalesCreate />} />
+      <Route path="/sales/detail/:id" element={<SalesDetail />} />
+      <Route path="/sales/success" element={<SalesSuccess />} />
 
       {/* 资金 */}
       <Route path="/fund" element={<Placeholder name="资金管理" />} />
@@ -61,6 +70,8 @@ export default function App() {
       <Route path="/approval" element={<ApprovalHub />} />
       <Route path="/approval/purchase" element={<PurchaseApprovalList />} />
       <Route path="/approval/purchase/:id" element={<PurchaseApprovalDetail />} />
+      <Route path="/approval/sales" element={<SalesApprovalList />} />
+      <Route path="/approval/sales/:id" element={<SalesApprovalDetail />} />
 
       {/* 用车 */}
       <Route path="/vehicle-use" element={<Placeholder name="用车申请" />} />
