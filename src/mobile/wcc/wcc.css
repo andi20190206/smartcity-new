@@ -1,0 +1,103 @@
+/* 唯车城蓝色主题 */
+.wcc-page {
+  --wcc-brand: #4080FF;
+  --wcc-brand-soft: #6BA1FF;
+  --wcc-brand-bg: rgba(64,128,255,0.06);
+  --wcc-brand-bg-strong: rgba(64,128,255,0.12);
+  min-height: 100vh;
+  background: var(--bg);
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.wcc-nav {
+  background: #fff;
+  color: var(--text-0);
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 0.5px solid var(--border);
+}
+.wcc-nav .nav-title {
+  flex: 1;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.wcc-nav .nav-back {
+  background: none;
+  border: none;
+  color: var(--text-0);
+  cursor: pointer;
+  width: 44px;
+  display: flex;
+  align-items: center;
+}
+.wcc-nav .nav-right {
+  width: 44px;
+}
+
+/* 蓝色按钮 */
+.wcc-btn-primary {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: var(--wcc-brand);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.wcc-btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* 蓝色标签 */
+.wcc-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* 底部Tab栏 */
+.wcc-tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  background: #fff;
+  display: flex;
+  padding-bottom: env(safe-area-inset-bottom);
+  border-top: 0.5px solid var(--border);
+  z-index: 100;
+}
+.wcc-tabbar-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 10px;
+  color: var(--text-2);
+}
+.wcc-tabbar-item.active {
+  color: var(--wcc-brand);
+}
+.wcc-tabbar-item svg {
+  margin-bottom: 2px;
+}

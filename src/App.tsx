@@ -6,6 +6,10 @@ import PurchaseSuccess from '@mobile/purchase/PurchaseSuccess'
 import ApprovalHub from '@mobile/approval/ApprovalHub'
 import PurchaseApprovalList from '@mobile/approval/PurchaseApprovalList'
 import PurchaseApprovalDetail from '@mobile/approval/PurchaseApprovalDetail'
+import WccLogin from '@mobile/wcc/WccLogin'
+import WccHome from '@mobile/wcc/WccHome'
+import WccPurchaseList from '@mobile/wcc/WccPurchaseList'
+import WccPurchaseDetail from '@mobile/wcc/WccPurchaseDetail'
 
 // 临时占位组件 — 等截图后替换为真实页面
 function Placeholder({ name }: { name: string }) {
@@ -65,7 +69,10 @@ export default function App() {
       <Route path="/message" element={<Placeholder name="消息中心" />} />
 
       {/* ===== 唯车城（经营公司端 — 企微H5） ===== */}
-      <Route path="/wcc/*" element={<Placeholder name="唯车城管理端" />} />
+      <Route path="/wcc/login" element={<WccLogin />} />
+      <Route path="/wcc/home" element={<WccHome />} />
+      <Route path="/wcc/purchase" element={<WccPurchaseList />} />
+      <Route path="/wcc/purchase/:id" element={<WccPurchaseDetail />} />
 
       {/* 404 */}
       <Route path="*" element={<Placeholder name="404 页面不存在" />} />
